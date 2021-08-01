@@ -1,0 +1,86 @@
+body {
+    background-color: antiquewhite;
+    position: absolute;
+    background-image: url("img/world.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: -50% -25%;
+
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+.area {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 100%;
+}
+
+.card {
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.front {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: xx-large;
+    font-family: 'Playfair Display', serif;
+    background-color: burlywood;
+    z-index: 2;
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+.back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: xx-large;
+    font-family: 'El Messiri', sans-serif;
+    background-color: darkkhaki;
+    z-index: 1;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.card:active {
+    transform: rotateY(180deg);
+}
+
+#footer {
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    background: burlywood; /* Цвет фона */
+    color: black; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+
+}
+
+.unselectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
